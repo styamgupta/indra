@@ -14,6 +14,7 @@ import ServiceDetailModal from './components/ServiceDetailModal';
 import BookingModal from './components/BookingModal';
 import { ServiceItem } from './types';
 import { SERVICES_LIST } from './data/servicesData';
+import { Analytics } from '@vercel/analytics/next';
 
 export default function App() {
   const [selectedDetailService, setSelectedDetailService] = useState<ServiceItem | null>(null);
@@ -129,6 +130,8 @@ export default function App() {
         preselectedCity={preselectedCity}
         onClose={handleCloseBooking}
       />
+            <Analytics />
+
     </div>
   );
 }
