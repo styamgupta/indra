@@ -14,6 +14,7 @@ import ServiceDetailModal from './components/ServiceDetailModal';
 import BookingModal from './components/BookingModal';
 import { ServiceItem } from './types';
 import { SERVICES_LIST } from './data/servicesData';
+import { Analytics } from "@vercel/analytics/next"
 
 export default function App() {
   const [selectedDetailService, setSelectedDetailService] = useState<ServiceItem | null>(null);
@@ -59,6 +60,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-teal-600 selection:text-white">
+      <Analytics/>
       {/* Top Navbar */}
       <Navbar onOpenBooking={handleOpenBooking} />
 
