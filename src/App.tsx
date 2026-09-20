@@ -14,8 +14,7 @@ import ServiceDetailModal from './components/ServiceDetailModal';
 import BookingModal from './components/BookingModal';
 import { ServiceItem } from './types';
 import { SERVICES_LIST } from './data/servicesData';
-import { Analytics } from '@vercel/analytics/next';
-
+import { Analytics } from '@vercel/analytics/react'; // ✅ Vite/React ke liye
 export default function App() {
   const [selectedDetailService, setSelectedDetailService] = useState<ServiceItem | null>(null);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
